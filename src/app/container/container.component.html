@@ -1,0 +1,5 @@
+<div *ngIf="result$ | async as result">
+    <app-controls [result]="result" (numberClick)="onNumberClick($event)" (actionClick)="onActionClick($event)"
+        (clearClick)="onClearClick()">
+    </app-controls>
+</div>

@@ -1,0 +1,57 @@
+<mat-form-field class="result" appearance="fill">
+    <input id="result" matInput value="{{result | number}}" [readonly]="true">
+</mat-form-field>
+
+<mat-grid-list cols="4" rowHeight="4:1">
+    <mat-grid-tile colspan="3">
+        <button id="clearBtn" mat-stroked-button (click)="clearClick.emit()">AC</button>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <button id="divideBtn" mat-stroked-button (click)="actionClick.emit(Action.Divide)">÷</button>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <button id="sevenBtn" mat-stroked-button (click)="numberClick.emit('7')">7</button>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <button id="eightBtn" mat-stroked-button (click)="numberClick.emit('8')">8</button>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <button id="nineBtn" mat-stroked-button (click)="numberClick.emit('9')">9</button>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <button id="multiplyBtn" mat-stroked-button (click)="actionClick.emit(Action.Multiply)">x</button>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <button id="fourBtn" mat-stroked-button (click)="numberClick.emit('4')">4</button>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <button id="fiveBtn" mat-stroked-button (click)="numberClick.emit('5')">5</button>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <button id="sixBtn" mat-stroked-button (click)="numberClick.emit('6')">6</button>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <button id="subtractBtn" mat-stroked-button (click)="actionClick.emit(Action.Subtract)">-</button>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <button id="oneBtn" mat-stroked-button (click)="numberClick.emit('1')">1</button>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <button id="twoBtn" mat-stroked-button (click)="numberClick.emit('2')">2</button>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <button id="threeBtn" mat-stroked-button (click)="numberClick.emit('3')">3</button>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <button id="addBtn" mat-stroked-button (click)="actionClick.emit(Action.Add)">+</button>
+    </mat-grid-tile>
+    <mat-grid-tile colspan="2">
+        <button id="zeroBtn" mat-stroked-button (click)="numberClick.emit('0')">0</button>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <button id="dotBtn" mat-stroked-button (click)="numberClick.emit('.')">.</button>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <button id="equalBtn" mat-stroked-button (click)="actionClick.emit(Action.Equals)">=</button>
+    </mat-grid-tile>
+</mat-grid-list>
